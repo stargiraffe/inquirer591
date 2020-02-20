@@ -1,0 +1,66 @@
+{% extends "querier/base.html" %}
+{% block content %}
+<form action="" method="get">
+    <label for="last-name">Last Name(ex:黃先生+王先生)</label>
+    <div>
+        <input id="last-name" type="text" name="last-name">
+    </div>
+    <div>
+        <div>
+            <fieldset data-role="controlgroup">
+                <div>Identity</div>
+                <input id="identity" type="checkbox" name="identity" value="仲介">仲介
+                <input id="identity" type="checkbox" name="identity" value="屋主">屋主
+                <input id="identity" type="checkbox" name="identity" value="代理人">代理人
+            </fieldset>
+        </div>
+    </div>
+    <div>
+        <div>
+            <fieldset data-role="controlgroup">
+                <div>House Condition</div>
+                <input id="house-condition" type="checkbox" name="house-condition" value="獨立套房">獨立套房
+                <input id="house-condition" type="checkbox" name="house-condition" value="分租套房">分租套房
+                <input id="house-condition" type="checkbox" name="house-condition" value="整層住家">整層住家
+                <input id="house-condition" type="checkbox" name="house-condition" value="車位">車位
+            </fieldset>
+        </div>
+    </div>
+    <div>
+        <div>
+            <fieldset data-role="controlgroup">
+                <div>House Type</div>
+                <input id="house-type" type="checkbox" name="house-type" value="公寓">公寓
+                <input id="house-type" type="checkbox" name="house-type" value="透天厝">透天厝
+                <input id="house-type" type="checkbox" name="house-type" value="電梯大樓">電梯大樓
+            </fieldset>
+        </div>
+    </div>
+    <div>
+        <div>
+            <fieldset data-role="controlgroup">
+                <div>Tenant Sex</div>
+                <input id="tenant-sex" type="checkbox" name="tenant-sex" value="男女生皆可">男女生皆可
+                <input id="tenant-sex" type="checkbox" name="tenant-sex" value="女生">女生
+                <input id="tenant-sex" type="checkbox" name="tenant-sex" value="男生">男生
+            </fieldset>
+        </div>
+    </div>
+    <label for="phone">Phone Number(ex:0933-664-875+0986-851-077 轉 1346505)</label>
+    <div>
+        <input id="phone" type="text" name="phone">
+    </div>
+    <div>
+        <input type="submit" value="submit">
+    </div>
+</form>
+{% for houseData in houseDatas %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">{{ houseData }}</a>
+        </div>
+    </div>
+</article>
+{% endfor %}
+{% endblock content %}

@@ -1,9 +1,9 @@
 {% extends "querier/base.html" %}
 {% block content %}
 <form action="" method="get">
-    <label for="last-name">Last Name(ex:黃先生+王先生)</label>
+    <label for="name">Name(ex:黃先生+王先生)</label>
     <div>
-        <input id="last-name" type="text" name="last-name">
+        <input id="name" type="text" name="name">
     </div>
     <div>
         <div>
@@ -13,6 +13,14 @@
                 <input id="identity" type="checkbox" name="identity" value="屋主">屋主
                 <input id="identity" type="checkbox" name="identity" value="代理人">代理人
             </fieldset>
+        </div>
+    </div>
+    <div>
+        <div>
+            <fieldset data-role="controlgroup">
+                <div>City</div>
+                <input id="city" type="checkbox" name="city" value="台北市">台北市
+                <input id="city" type="checkbox" name="city" value="新北市">新北市
         </div>
     </div>
     <div>
